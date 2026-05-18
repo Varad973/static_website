@@ -85,6 +85,156 @@ Paste the following HTML:
   <h1>Hello from Ubuntu EC2</h1>
 </body>
 </html>
+
+OR
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Ubuntu Website</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            overflow:hidden;
+        }
+
+        .container{
+            text-align:center;
+            background: rgba(255,255,255,0.12);
+            padding:50px;
+            border-radius:20px;
+            backdrop-filter: blur(10px);
+            box-shadow:0 8px 25px rgba(0,0,0,0.3);
+            color:white;
+            width:80%;
+            max-width:700px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        h1{
+            font-size:50px;
+            margin-bottom:20px;
+        }
+
+        p{
+            font-size:20px;
+            margin-bottom:30px;
+            line-height:1.6;
+        }
+
+        .btn{
+            display:inline-block;
+            padding:15px 30px;
+            background:white;
+            color:#2a5298;
+            text-decoration:none;
+            font-size:18px;
+            border-radius:50px;
+            transition:0.3s;
+            font-weight:bold;
+        }
+
+        .btn:hover{
+            background:#ffcc00;
+            color:black;
+            transform:scale(1.05);
+        }
+
+        @keyframes fadeIn{
+            from{
+                opacity:0;
+                transform:translateY(30px);
+            }
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+        }
+
+        .circles div{
+            position:absolute;
+            border-radius:50%;
+            background:rgba(255,255,255,0.1);
+            animation: float 10s infinite linear;
+        }
+
+        .circles div:nth-child(1){
+            width:120px;
+            height:120px;
+            left:10%;
+            top:20%;
+        }
+
+        .circles div:nth-child(2){
+            width:200px;
+            height:200px;
+            right:15%;
+            top:10%;
+        }
+
+        .circles div:nth-child(3){
+            width:150px;
+            height:150px;
+            left:20%;
+            bottom:10%;
+        }
+
+        .circles div:nth-child(4){
+            width:100px;
+            height:100px;
+            right:25%;
+            bottom:15%;
+        }
+
+        @keyframes float{
+            0%{
+                transform:translateY(0px) rotate(0deg);
+            }
+            100%{
+                transform:translateY(-30px) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="circles">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="container">
+        <h1>Welcome to AWS EC2</h1>
+
+        <p>
+            Your Ubuntu static website is successfully hosted on an 
+            AWS EC2 instance.
+            <br><br>
+            Fast • Secure • Cloud Powered
+        </p>
+
+        <a href="#" class="btn">Explore More</a>
+    </div>
+
+</body>
+</html>
 ```
 
 Save and exit:
